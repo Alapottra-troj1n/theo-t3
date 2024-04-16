@@ -2,6 +2,8 @@ import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import { ClerkProvider } from "@clerk/nextjs";
+import TopNav from "./_components/TopNav";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,22 +16,6 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-function TopNavbar() {
-  return (
-    <nav className=" p-5 text-white">
-      <div className="flex justify-between w-full max-w-6xl mx-auto">
-       
-          <Link href="/" className="text-2xl font-bold text-white">
-            Gallery
-          </Link>
-          <Link href="/" className="text-2xl font-bold text-white">
-           SignIn
-          </Link>
-      
-      </div>
-    </nav>
-  );
-}
 
 export default function RootLayout({
   children,
@@ -37,11 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>
-        <TopNavbar />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`font-sans ${inter.variable}`}>
+          <TopNav />
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
