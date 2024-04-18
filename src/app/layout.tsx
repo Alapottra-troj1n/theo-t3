@@ -1,9 +1,9 @@
 import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
-import Link from "next/link";
 import { ClerkProvider } from "@clerk/nextjs";
 import TopNav from "./_components/TopNav";
+import "@uploadthing/react/styles.css";
 
 const inter = Inter({
   subsets: ["latin"],
