@@ -1,20 +1,10 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import { auth } from "@clerk/nextjs/server";
-import { eq } from "drizzle-orm";
-import { db } from "~/server/db";
-
+import { getPhotos } from "~/server/queries";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  const user = auth();
-  console.log(user)
-  const gallery = await db.query.images.findMany({
-    orderBy: (model, { desc }) => desc(model.id),
-    where: (images, { eq }) => eq(images.userId, user.userId?.toString() || ''),
-  });
-
-
+  const gallery = await getPhotos();
 
   function Images() {
     return (
