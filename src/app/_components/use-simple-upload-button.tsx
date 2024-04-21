@@ -50,30 +50,30 @@ function UploadSVG() {
 }
 
 export function SimpleUploadButton() {
-  const { inputProps } = useUploadThingInputProps("imageUploader", {
-  
+  const { inputProps,isUploading } = useUploadThingInputProps("imageUploader", {
     onUploadBegin() {
-      toast('Uploading...',{
+      toast("Uploading...", {
         duration: 10000,
-        id: 'upload-begin'
+        id: "upload-begin",
       });
     },
     onClientUploadComplete(res) {
       router.refresh();
-      toast.dismiss('upload-begin');
-      toast.success('Upload complete');
-    }
+      toast.dismiss("upload-begin");
+      toast.success("Upload complete");
+    },
   });
   const router = useRouter();
   return (
     <div className="flex">
-      <label className="cursor-pointer mr-5" htmlFor="upload-button">
+      <label className="mr-5 cursor-pointer" htmlFor="upload-button">
         <UploadSVG />
       </label>
       <input
         type="file"
         className="sr-only hidden cursor-pointer"
         id="upload-button"
+        disabled={isUploading}
         {...inputProps}
       />
     </div>
