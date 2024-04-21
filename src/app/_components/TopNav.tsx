@@ -5,27 +5,33 @@ import { SignInButton, SignedOut } from "@clerk/nextjs";
 import Link from "next/link";
 import { UploadButton } from "../utils/uploadthing";
 import { useRouter } from "next/navigation";
+import { SimpleUploadButton } from "./use-simple-upload-button";
 
 const TopNav = () => {
   const router = useRouter();
   return (
     <nav className=" p-5 text-white">
-      <div className="mx-auto flex w-full max-w-6xl justify-between">
+      <div  className="mx-auto flex w-full max-w-6xl justify-between">
         <Link href="/" className="text-2xl font-bold text-white">
           Gallery
         </Link>
-        <div className="flex flex-row text-2xl font-bold text-white">
+        <div className="flex flex-row justify-center  items-center text-2xl font-bold text-white">
           <SignedOut>
             <SignInButton />
           </SignedOut>
           <SignedIn>
-            <UploadButton
-            className="text-sm"
-              endpoint="imageUploader"
-              onClientUploadComplete={() => {
-                router.refresh();
-              }}
-            />
+            
+            <SimpleUploadButton/>
+              {/* <UploadButton 
+                className="text-sm "
+                
+                endpoint="imageUploader"
+                onClientUploadComplete={() => {
+                  router.refresh();
+                }}
+               
+              /> */}
+            
             <UserButton
               appearance={{
                 elements: {
