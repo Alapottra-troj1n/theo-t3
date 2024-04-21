@@ -27,7 +27,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
       onClick={onDismiss}
     >
       {children}
-      {/* <button onClick={onDismiss} className="close-button" /> */}
+     
     </dialog>
   );
 }

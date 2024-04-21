@@ -12,7 +12,7 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@babel/runtime@^7.23.2", "@babel/runtime@^7.24.0", "@babel/runtime@^7.24.1":
+"@babel/runtime@^7.13.10", "@babel/runtime@^7.23.2", "@babel/runtime@^7.24.0", "@babel/runtime@^7.24.1":
   version "7.24.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.4.tgz#de795accd698007a66ba44add6cc86542aff1edd"
   integrity sha512-dkxf7+hn8mFBwKjs9bvBlArzLVxVbS8usaPUDd5p2a9JCL9tB8OaOVN1isD4+Xyk4ns89/xeOmbQvgdK7IIVdA==
@@ -67,13 +67,6 @@
   integrity sha512-p6X1lU4k/G074UhIX+aFmVEwipXRHGxjMAtbdo/OErkOSZoq9gF+cu2h3RWEofhkmD6fx35FniXIP1BllJRJOQ==
   dependencies:
     csstype "3.1.1"
-
-"@drizzle-team/studio@^0.0.39":
-  version "0.0.39"
-  resolved "https://registry.yarnpkg.com/@drizzle-team/studio/-/studio-0.0.39.tgz#70e9155503f7343e8f1917d316f93e64c23760e1"
-  integrity sha512-c5Hkm7MmQC2n5qAsKShjQrHoqlfGslB8+qWzsGGZ+2dHMRTNG60UuzalF0h0rvBax5uzPXuGkYLGaQ+TUX3yMw==
-  dependencies:
-    superjson "^2.2.1"
 
 "@esbuild-kit/core-utils@^3.3.2":
   version "3.3.2"
@@ -348,6 +341,16 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@hono/node-server@^1.9.0":
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/@hono/node-server/-/node-server-1.11.0.tgz#18d73d0a79d1c0ca387d02866231b5e2d9eb7b5e"
+  integrity sha512-TLIJq9TMtD1NEG1mVoqNUn1Ita0qSaB5XboZErjFBcO/GJYXwWY4dVdTi9G0lbxtu0x+hJXDItcLaFHb7rlFTw==
+
+"@hono/zod-validator@^0.2.0":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@hono/zod-validator/-/zod-validator-0.2.1.tgz#41ed7464fea2f1453e22e812fe9de0b5119c158e"
+  integrity sha512-HFoxln7Q6JsE64qz2WBS28SD33UB2alp3aRKmcWnNLDzEL1BLsWfbdX6e1HIiUprHYTIXf5y7ax8eYidKUwyaA==
+
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.14.tgz#d78e481a039f7566ecc9660b4ea7fe6b1fec442b"
@@ -507,6 +510,21 @@
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
+
+"@radix-ui/react-compose-refs@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-compose-refs/-/react-compose-refs-1.0.1.tgz#7ed868b66946aa6030e580b1ffca386dd4d21989"
+  integrity sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+
+"@radix-ui/react-slot@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-slot/-/react-slot-1.0.2.tgz#a9ff4423eade67f501ffb32ec22064bc9d3099ab"
+  integrity sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@radix-ui/react-compose-refs" "1.0.1"
 
 "@rollup/plugin-commonjs@24.0.0":
   version "24.0.0"
@@ -984,6 +1002,27 @@
   dependencies:
     std-env "^3.7.0"
 
+"@upstash/core-analytics@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@upstash/core-analytics/-/core-analytics-0.0.8.tgz#e7acc1fcad3751df2bdf3507ad936855e554c2ce"
+  integrity sha512-MCJoF+Y8fkzq4NRLG7kEHjtGyMsZ2DICBdmEdwoK9umoSrfkzgBlYdZiHTIaewyt9PGaMZCHOasz0LAuMpxwxQ==
+  dependencies:
+    "@upstash/redis" "^1.28.3"
+
+"@upstash/ratelimit@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@upstash/ratelimit/-/ratelimit-1.1.2.tgz#f485c0ef16dfad85cfd9ecddbf76c02b82512465"
+  integrity sha512-u9aGWwJ9rojcoZoD3EyBJ0F/fLOtD4dlugCYcRTFXNPPDnMAQ8Y8CoXb02hucT24q62xb3ikyS4NdZyj4aqESQ==
+  dependencies:
+    "@upstash/core-analytics" "^0.0.8"
+
+"@upstash/redis@^1.28.3", "@upstash/redis@^1.30.0":
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.30.0.tgz#b9b5b4025ec7a45421dbb606d1bb32e2e932119d"
+  integrity sha512-bkxl2n7qls27hONXNyItM6ccRT0NBJ8c6zl83wx+TlODpYXehgeiUJTkcTaXLp7hk+zy6Mqpzpeo3GX+wZSvBw==
+  dependencies:
+    crypto-js "^4.2.0"
+
 "@vercel/postgres@^0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@vercel/postgres/-/postgres-0.8.0.tgz#ea658c8b19d883b1225d2e3d195e7251254936cd"
@@ -1410,7 +1449,7 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-crypto-js@4.2.0:
+crypto-js@4.2.0, crypto-js@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.2.0.tgz#4d931639ecdfd12ff80e8186dba6af2c2e856631"
   integrity sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==
@@ -1565,13 +1604,14 @@ dreamopt@~0.8.0:
   dependencies:
     wordwrap ">=0.0.2"
 
-drizzle-kit@^0.20.14:
-  version "0.20.14"
-  resolved "https://registry.yarnpkg.com/drizzle-kit/-/drizzle-kit-0.20.14.tgz#bd9bdc01db6630292077d99ba6d2cee3a96e54de"
-  integrity sha512-0fHv3YIEaUcSVPSGyaaBfOi9bmpajjhbJNdPsRMIUvYdLVxBu9eGjH8mRc3Qk7HVmEidFc/lhG1YyJhoXrn5yA==
+drizzle-kit@^0.20.17:
+  version "0.20.17"
+  resolved "https://registry.yarnpkg.com/drizzle-kit/-/drizzle-kit-0.20.17.tgz#f4fa3445b3c5b1b4e3ac6b40f97111988e1b8482"
+  integrity sha512-mLVDS4nXmO09wFVlzGrdshWnAL+U9eQGC5zRs6hTN6Q9arwQGWU2XnZ17I8BM8Quau8CQRx3Ms6VPgRWJFVp7Q==
   dependencies:
-    "@drizzle-team/studio" "^0.0.39"
     "@esbuild-kit/esm-loader" "^2.5.5"
+    "@hono/node-server" "^1.9.0"
+    "@hono/zod-validator" "^0.2.0"
     camelcase "^7.0.1"
     chalk "^5.2.0"
     commander "^9.4.1"
@@ -1580,9 +1620,11 @@ drizzle-kit@^0.20.14:
     esbuild-register "^3.5.0"
     glob "^8.1.0"
     hanji "^0.0.5"
+    hono "^4.1.4"
     json-diff "0.9.0"
     minimatch "^7.4.3"
     semver "^7.5.4"
+    superjson "^2.2.1"
     zod "^3.20.2"
 
 drizzle-orm@^0.29.4:
@@ -2470,6 +2512,11 @@ hoist-non-react-statics@^3.3.2:
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
   dependencies:
     react-is "^16.7.0"
+
+hono@^4.1.4:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.2.5.tgz#2e5ad45d67af3c336a6878c65820e93db840e8f6"
+  integrity sha512-uonJD3i/yy005kQ7bPZRVfG3rejYJwyPqBmPoUGijS4UB/qM+YlrZ7xzSWy+ByDu9buGHUG+f+SKzz03Y6V1Kw==
 
 https-proxy-agent@^5.0.0:
   version "5.0.1"

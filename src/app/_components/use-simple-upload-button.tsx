@@ -57,6 +57,10 @@ export function SimpleUploadButton() {
         id: "upload-begin",
       });
     },
+    onUploadError(err) {
+      toast.dismiss("upload-begin");
+      toast.error("Upload failed");
+    },
     onClientUploadComplete(res) {
       router.refresh();
       toast.dismiss("upload-begin");
