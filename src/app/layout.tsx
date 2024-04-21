@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import TopNav from "./_components/TopNav";
 import "@uploadthing/react/styles.css";
+import { Toaster } from "~/components/ui/sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,10 +28,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`font-sans ${inter.variable} dark`}>
+        <body className={`font-sans ${inter.variable} dark overflow-x-hidden`}>
           <TopNav />
           {children}
           {modal}
+          <Toaster/>
         </body>
       </html>
     </ClerkProvider>
